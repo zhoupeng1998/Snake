@@ -1,0 +1,41 @@
+smarg<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Study</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script type="text/javascript" src="snake.js"></script>
+</head>
+
+<body>
+    <div id="container" style="width: 480px; background-color: mistyrose; margin: 0 auto">
+        <script>
+            initTable();
+            function initGame () {
+                initMatrix();
+                if (!ONGAME) {
+                    initSnake();
+                    setFood();
+                    ONGAME = true;
+                    setInterval(function () {
+                        if(ONGAME) {
+                            proceed();
+                        }
+                    },200);
+                    //ONGAME = true;
+                }
+            }
+        </script>
+        <div id="container" style="width: 480px; background-color: white; margin: 0 auto">
+            <br>
+            <center><button id="start" onclick="initGame()" style="margin: 0 auto">Play</button></center>
+            <br>
+            <center><a href="index.html"><button style="margin: 0 auto">Reset</button></a></center>
+        </div>
+    </div>
+
+
+</body>
+</html>
